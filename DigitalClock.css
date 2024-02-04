@@ -1,0 +1,66 @@
+/**Digital Clock CSS**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{min-height: 100%;}
+
+body{
+  background: url("tile.png") repeat;
+}
+
+.container{
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  margin: -45px 0px 0px -70px;
+  width: auto;
+  height: 30%;
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  border: 5px solid black;
+  box-shadow: 20px 3px 30px 10px black;
+}
+
+.time{
+  background-color: black;
+  margin: 0 20px 20px;
+  box-shadow: 0 3px 10px #111;
+  border-top: 1px solid #393939;
+  border-radius: 10px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.time:before{
+  border-bottom: 2px solid black;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+.flip{
+  border-radius: 5px;
+  font-size: 145px;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.label{
+  font-size: 20px;
+  color: white; 
+  display: flex;
+  align-content: inherit;
+  margin: 0 20px 0 20px;
+}

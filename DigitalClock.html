@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--DIgital Clock By Abdulkadir 22/01/2024-->
+<html lang="en-US">
+    <head>
+        <title>Simple Digital Clock</title>
+        <link rel="stylesheet" href="DigitalClock.css">
+        
+        <script type="text/javascript">
+            function DigitalClock(){
+                
+                //creating New Date Object
+                var time = new Date();
+                var h = time.getHours() % 12;
+                var m = time.getMinutes();
+                var s = time.getSeconds();
+                
+                document.getElementById("hour").innerHTML = h;
+                document.getElementById("minute").innerHTML = m;
+                document.getElementById("seconds").innerHTML = s;
+                
+            }
+            
+            
+        </script>
+    </head>
+    <body onload="setInterval(DigitalClock, 0)">
+
+        <div class="container">
+
+            <div class="time">
+                <div class="flip" id="hour"></div>
+                <p class="label">HOURS</p>
+            </div>
+            <div class="time">
+                <div class="flip" id="minute"></div>
+                <p class="label">MINUTES</p>
+            </div>
+            <div class="time">
+                <div class="flip" id="seconds"></div>
+                <p class="label">SECONDS</p>
+            </div>
+        </div>
+        
+    </body>
+</html>
