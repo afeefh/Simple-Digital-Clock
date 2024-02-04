@@ -12,11 +12,11 @@ body{
 }
 
 .container{
-  position: absolute;
-  left: 35%;
+  position: relative;
+  left: 40%;
   top: 50%;
   margin: -45px 0px 0px -70px;
-  width: auto;
+  width: 40%;
   height: 30%;
   padding: 10px;
   display: flex;
