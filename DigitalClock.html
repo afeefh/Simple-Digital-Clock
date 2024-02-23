@@ -6,19 +6,28 @@
         <link rel="stylesheet" href="DigitalClock.css">
         
         <script type="text/javascript">
+
             function DigitalClock(){
                 
                 //creating New Date Object
                 var time = new Date();
-                var h = time.getHours() % 12;
-                var m = time.getMinutes();
-                var s = time.getSeconds();
-                
+                var h = countDown(time.getHours());
+                var m = countDown(time.getMinutes());
+                var s = countDown(time.getSeconds());
+
                 document.getElementById("hour").innerHTML = h;
                 document.getElementById("minute").innerHTML = m;
                 document.getElementById("seconds").innerHTML = s;
                 
             }
+
+            //Countdown to add zero to the time
+            function countDown(count){
+                if(count < 10){count = "0" + count}
+                return count;
+            }
+
+           
             
             
         </script>
